@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="img\M8B_Start.png" />
+      <Resource Include="img\M8B_Start.png" />
+      <None Remove="img\M8B_Positive10.png" />
+      <Resource Include="img\M8B_Positive10.png" />
+      <None Remove="img\M8B_Positive09.png" />
+      <Resource Include="img\M8B_Positive09.png" />
+      <None Remove="img\M8B_Positive08.png" />
+      <Resource Include="img\M8B_Positive08.png" />
+      <None Remove="img\M8B_Positive07.png" />
+      <Resource Include="img\M8B_Positive07.png" />
+      <None Remove="img\M8B_Positive06.png" />
+      <Resource Include="img\M8B_Positive06.png" />
+      <None Remove="img\M8B_Positive05.png" />
+      <Resource Include="img\M8B_Positive05.png" />
+      <None Remove="img\M8B_Positive04.png" />
+      <Resource Include="img\M8B_Positive04.png" />
+      <None Remove="img\M8B_Positive03.png" />
+      <Resource Include="img\M8B_Positive03.png" />
+      <None Remove="img\M8B_Positive02.png" />
+      <Resource Include="img\M8B_Positive02.png" />
+      <None Remove="img\M8B_Positive01.png" />
+      <Resource Include="img\M8B_Positive01.png" />
+      <None Remove="img\M8B_Neutral05.png" />
+      <Resource Include="img\M8B_Neutral05.png" />
+      <None Remove="img\M8B_Neutral04.png" />
+      <Resource Include="img\M8B_Neutral04.png" />
+      <None Remove="img\M8B_Neutral03.png" />
+      <Resource Include="img\M8B_Neutral03.png" />
+      <None Remove="img\M8B_Neutral02.png" />
+      <Resource Include="img\M8B_Neutral02.png" />
+      <None Remove="img\M8B_Neutral01.png" />
+      <Resource Include="img\M8B_Neutral01.png" />
+      <None Remove="img\M8B_Negative05.png" />
+      <Resource Include="img\M8B_Negative05.png" />
+      <None Remove="img\M8B_Negative04.png" />
+      <Resource Include="img\M8B_Negative04.png" />
+      <None Remove="img\M8B_Negative03.png" />
+      <Resource Include="img\M8B_Negative03.png" />
+      <None Remove="img\M8B_Negative02.png" />
+      <Resource Include="img\M8B_Negative02.png" />
+      <None Remove="img\M8B_Negative01.png" />
+      <Resource Include="img\M8B_Negative01.png" />
+    </ItemGroup>
+
+</Project>
