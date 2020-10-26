@@ -82,7 +82,7 @@ namespace ConsoleApp
 
                         // 5 negative answers
                         "Don't count on it.",
-                        "My reply is no,",
+                        "My reply is no.",
                         "My sources say no.",
                         "Outlook not so good.",
                         "Very doubtful."
