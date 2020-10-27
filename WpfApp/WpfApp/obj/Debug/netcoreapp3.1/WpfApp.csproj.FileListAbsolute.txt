@@ -2,7 +2,6 @@ C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfAp
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp_MarkupCompile.cache
-C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp_MarkupCompile.lref
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\bin\Debug\netcoreapp3.1\WpfApp.exe
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\bin\Debug\netcoreapp3.1\WpfApp.deps.json
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\bin\Debug\netcoreapp3.1\WpfApp.runtimeconfig.json

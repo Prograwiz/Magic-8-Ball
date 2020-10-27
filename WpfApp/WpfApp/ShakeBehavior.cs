@@ -12,9 +12,13 @@ namespace WpfApp
     {
         private const double DefaultRepeatInterval = 10.0;
         private const double DefaultSpeedRatio = 1.0;
+        private const double DefaultFrameCount = 8.0;
+        private const double DefaultTimeOffsetInSeconds = 0.25;
 
         private const string RepeatIntervalName = "RepeatInterval";
         private const string SpeedRatioName = "SpeedRatio";
+        private const string KeyFrameCountName = "KeyFrameCount";
+        private const string TimeOffsetInSecondsName = "TimeOffsetInSeconds";
 
         public static readonly DependencyProperty RepeatIntervalProperty =
             DependencyProperty.Register(RepeatIntervalName,
@@ -27,6 +31,18 @@ namespace WpfApp
                 typeof(double),
                 typeof(ShakeBehavior),
                 new PropertyMetadata(DefaultSpeedRatio));
+
+        public static readonly DependencyProperty KeyFrameCountProperty =
+            DependencyProperty.Register(KeyFrameCountName,
+                typeof(double),
+                typeof(ShakeBehavior),
+                new PropertyMetadata(DefaultFrameCount));
+
+        public static readonly DependencyProperty TimeOffsetInSecondsProperty =
+            DependencyProperty.Register(TimeOffsetInSecondsName,
+                typeof(double),
+                typeof(ShakeBehavior),
+                new PropertyMetadata(DefaultTimeOffsetInSeconds));
 
         private Style _originalStyle;
 
@@ -59,12 +75,46 @@ namespace WpfApp
         ///     If Acceleration or Deceleration are specified, this ratio is the
         ///     average ratio over the natural length of the Shake's Timeline. This
         ///     property has a default value of 1.0. If set to zero or less it
-        ///     will be reset back to th default value.
+        ///     will be reset back to the default value.
         /// </remarks>
         public double SpeedRatio
         {
             get => (double) GetValue(SpeedRatioProperty);
             set => SetValue(SpeedRatioProperty, value);
+        }
+
+        /// <summary>
+        ///     Gets or sets the number of time one keyframe
+        ///     will be repeated.
+        /// </summary>
+        /// <value>
+        ///     The number of keyframes repetition.
+        /// </value>
+        /// <remarks>
+        ///     By default, its value is 8.0. The totalAnimationLength is
+        ///     obtained by multiplying the KeyFrameCount and the TimeOffsetInSeconds.
+        /// </remarks>
+        public double KeyFrameCount
+        {
+            get => (double) GetValue(KeyFrameCountProperty);
+            set => SetValue(KeyFrameCountProperty, value);
+        }
+
+        /// <summary>
+        ///     Gets or sets the duration one keyframe will take
+        ///     to make its rotation.
+        /// </summary>
+        /// <value>
+        ///     The duration of one keyframe.
+        /// </value>
+        /// <remarks>
+        ///     By default, its value is 0.25. The totalAnimationLength is
+        ///     obtained by multiplying the KeyFrameCount and the TimeOffsetInSeconds.
+        /// </remarks>
+        public double TimeOffsetInSeconds
+        {
+            get => (double) GetValue(TimeOffsetInSecondsProperty);
+            set => SetValue(TimeOffsetInSecondsProperty, value);
         }
 
         protected override void OnAttached()
@@ -126,10 +176,9 @@ namespace WpfApp
             var storyboard = new Storyboard
             {
                 SpeedRatio = speedRatio,
+                // If RepeatBehavior = 0 do not repeat
                 RepeatBehavior = RepeatInterval == 0 ? new RepeatBehavior(1) : RepeatBehavior.Forever
             };
-
-            // If RepeatInterval = 0, don't repeat the animation
 
             storyboard.Children.Add(CreateAnimationTimeline());
 
@@ -143,9 +192,7 @@ namespace WpfApp
             animation.SetValue(Storyboard.TargetPropertyProperty,
                 new PropertyPath("(0).(1)", UIElement.RenderTransformProperty, RotateTransform.AngleProperty));
 
-            const int keyFrameCount = 8;
-            const double timeOffsetInSeconds = 0.25;
-            const double totalAnimationLength = keyFrameCount * timeOffsetInSeconds;
+            var totalAnimationLength = KeyFrameCount * TimeOffsetInSeconds;
             var repeatInterval = RepeatInterval;
 
             // Can't be less than zero and pointless to be less than total length
@@ -155,9 +202,9 @@ namespace WpfApp
             animation.Duration = new Duration(TimeSpan.FromSeconds(repeatInterval));
 
             const int targetValue = 12;
-            for (var i = 0; i < keyFrameCount; i++)
+            for (var i = 0; i < KeyFrameCount; i++)
                 animation.KeyFrames.Add(new LinearDoubleKeyFrame(i % 2 == 0 ? targetValue : -targetValue,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(i * timeOffsetInSeconds))));
+                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(i * TimeOffsetInSeconds))));
 
             animation.KeyFrames.Add(new LinearDoubleKeyFrame(0,
                 KeyTime.FromTimeSpan(TimeSpan.FromSeconds(totalAnimationLength))));

@@ -3,11 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp"
-        xmlns:interactivity="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="Magic 8-ball" Height="600" Width="600" MinHeight="550" MinWidth="550">
-<Grid x:Name="Grid">
+    <Grid x:Name="Grid">
 
         <!-- Grid Definitions -->
         <Grid.ColumnDefinitions>
@@ -44,10 +42,11 @@
         <!-- Grid Elements -->
         <Button Grid.Column="4" Grid.Row="6" x:Name="SubmitTheQuestion" Click="SubmitTheQuestion_OnClick"
                 Content="Hit to submit the question!" FontFamily="Open Sans" />
- 
+
         <TextBox Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="4" x:Name="QuestionTextBox" />
-        
-        <Image Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" x:Name="AnswerDisplay" Source="pack://application:,,,/img/M8B_Start.png">
+
+        <Image Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" x:Name="AnswerDisplay"
+               Source="pack://application:,,,/img/M8B_Start.png">
             <!--<interactivity:Interaction.Behaviors>
                 <local:ShakeBehavior SpeedRatio="3.0"/>
             </interactivity:Interaction.Behaviors>-->
