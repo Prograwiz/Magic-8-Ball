@@ -17,3 +17,5 @@ C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfAp
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp.dll
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp.pdb
 C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-Ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp.genruntimeconfig.cache
+C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-ball\WpfApp\WpfApp\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\Users\Prograwiz\OneDrive\Programmation\Projets\Easy\Magic-8-ball\WpfApp\WpfApp\obj\Debug\netcoreapp3.1\WpfApp.csproj.CopyComplete

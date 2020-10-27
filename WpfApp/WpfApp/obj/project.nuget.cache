@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c129/rDCUPtMbjpxNTK6a/GcCbibx9eOx52warMN8NXZ78mIJBiESfv28D21MIDPZaV970H57Z5Yk3zGjC7wag==",
+  "dgSpecHash": "CK03efY0v+rWdbAGrGhPXUd4XyNZLYImnLvFGU/ouKHA45xePRhbAdWnMphktLQ/htQ/bjLwKZgEPmSvtSDDRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\WpfApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\WpfApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Prograwiz\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512"
+  ],
   "logs": []
 }

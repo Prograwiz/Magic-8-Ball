@@ -49,6 +49,16 @@
       <Resource Include="img\M8B_Negative02.png" />
       <None Remove="img\M8B_Negative01.png" />
       <Resource Include="img\M8B_Negative01.png" />
+      <None Remove="img\M8B_Processing.png" />
+      <Resource Include="img\M8B_Processing.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ShakeBehavior2.cs" />
     </ItemGroup>
 
 </Project>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\WpfApp.csproj": {}
+    "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\WpfApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\WpfApp.csproj": {
+    "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\WpfApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\WpfApp.csproj",
+        "projectUniqueName": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\WpfApp.csproj",
         "projectName": "WpfApp",
-        "projectPath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\WpfApp.csproj",
+        "projectPath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\WpfApp.csproj",
         "packagesPath": "C:\\Users\\Prograwiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-Ball\\WpfApp\\WpfApp\\obj\\",
+        "outputPath": "C:\\Users\\Prograwiz\\OneDrive\\Programmation\\Projets\\Easy\\Magic-8-ball\\WpfApp\\WpfApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -38,6 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.19, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
