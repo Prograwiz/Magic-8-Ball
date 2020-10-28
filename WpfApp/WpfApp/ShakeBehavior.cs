@@ -64,11 +64,11 @@ namespace WpfApp
         }
 
         /// <summary>
-        ///     Gets or sets the ratio at which time progresses on the Shakes
+        ///     Gets or sets the ratio at which time progresses on the shake
         ///     Timeline, relative to its parent.
         /// </summary>
         /// <value>
-        ///     The ratio at which time progresses on the Shakes Timeline, relative
+        ///     The ratio at which time progresses on the shake Timeline, relative
         ///     to its parent.
         /// </value>
         /// <remarks>
@@ -105,11 +105,12 @@ namespace WpfApp
         ///     to make its rotation.
         /// </summary>
         /// <value>
-        ///     The duration of one keyframe.
+        ///     The duration in seconds of one keyframe.
         /// </value>
         /// <remarks>
-        ///     By default, its value is 0.25. The totalAnimationLength is
-        ///     obtained by multiplying the KeyFrameCount and the TimeOffsetInSeconds.
+        ///     By default, its value is 0.25. The TotalAnimationLength can be
+        ///     obtained by multiplying the KeyFrameCount and the TimeOffsetInSeconds,
+        ///     and then dividing this result by the SpeedRatio.
         /// </remarks>
         public double TimeOffsetInSeconds
         {

@@ -18,22 +18,30 @@ namespace WpfApp
 
         private void SubmitTheQuestion_OnClick(object sender, RoutedEventArgs e)
         {
-            QuestionTextBox.Text = "";
-            GiveAnAnswer();
+            if (QuestionTextBox.Text != "")
+            {
+                QuestionTextBox.Text = "";
+                GiveAnAnswer();
+            }
 
             async void GiveAnAnswer()
             {
-                // TODO: You shouldn't be able to press the button while the process is not finished, it causes multiple answers.
+                SubmitTheQuestion.IsEnabled = false;
+
                 // Processing Effect
                 AnswerDisplay.Source = new BitmapImage(new Uri("pack://application:,,,/img/M8B_Processing.png"));
                 var shake = new ShakeBehavior {RepeatInterval = 0, SpeedRatio = 2};
                 Interaction.GetBehaviors(AnswerDisplay).Add(shake);
 
                 // Wait for the duration of the shaking effect
-                await Task.Delay(TimeSpan.FromSeconds((shake.KeyFrameCount * shake.TimeOffsetInSeconds) / shake.SpeedRatio));
-                
+                var animationLength = shake.KeyFrameCount * shake.TimeOffsetInSeconds / shake.SpeedRatio;
+                await Task.Delay(TimeSpan.FromSeconds(animationLength));
+
                 // Cast an answer
                 CastAnAnswer();
+
+                SubmitTheQuestion.IsEnabled = true;
+
 
                 void CastAnAnswer()
                 {
